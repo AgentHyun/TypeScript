@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'MaruBuri';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
+       url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
+       url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: 'MaruBuri', sans-serif;
+  margin: 0;
+  background-color: #fdfdfd;
+}
+
+/* 전체 wrapper */
+.app-wrapper {
+  display: flex;
+}
+
+/* 앱 메인 영역 */
+.app-container {
+  width: 100%;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 헤더 */
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #34495e;
+  font-weight: bold;
+}
+
+.menu-section h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin: 3rem 0 2rem;
+}
+
+/* 카드 리스트 */
+.menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 카드 개별 디자인 */
+.menu-card {
+  width: 240px;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  font-size: 1rem;
+  margin: 12px;
+  color: #2c3e50;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0 12px 8px;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.1rem;
+  margin: 0 12px 12px;
+}
+
+/* 삭제 버튼: hover 시에만 표시 */
+.menu-card .delete-btn {
+  display: none;
+}
+
+.menu-card:hover .delete-btn {
+  display: inline-block;
+  margin: 10px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-card:hover .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* 플로팅 버튼 */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: white;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fab:hover {
+  background-color: #555;
+}
+
+/* 모달 배경 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 모달 창 */
+.modal-content {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+/* 입력 폼 */
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-form input,
+.menu-form button {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.menu-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-form button:hover {
+  background-color: #555;
+}

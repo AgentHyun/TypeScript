@@ -1,0 +1,42 @@
+/* 네비게이션 바 */
+
+@font-face {
+    font-family: 'MaruBuri';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+.navbar {
+  font-family: 'MaruBuri';
+  width: 100%;
+  height: 3.5vh;
+  background-color: #d1d8dd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 1rem 2rem;
+
+  /* ✅ 핵심 추가 */
+  display: flex;
+  align-items: center;     /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  text-align: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar li a:hover {
+  color: #e67e22;
+}
